@@ -8,7 +8,7 @@
                     Form Tambah Data Barang
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="nama">Nama Barang</label>
                             <input type="text" class="form-control" id="nama" name="nama">
@@ -36,6 +36,14 @@
                             <label for="stok">Stok Barang</label>
                             <input type="text" class="form-control" id="stok" name="stok">
                             <small class="form-text text-danger"><?= form_error('stok'); ?></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="stok">Gambar Barang</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="gambar" name="gambar">
+                                <label class="custom-file-label" for="customFile">Pilih Gambar...</label>
+                            </div>
+                            <small class="form-text text-danger"><?= form_error('gambar'); ?></small>
                         </div>
                         <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data Barang</button>
                     </form>

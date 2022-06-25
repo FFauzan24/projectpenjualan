@@ -47,7 +47,7 @@
     </div>
 </div>
                 -->
-    <div class=" container mt-3">
+    <div class=" container mt-3 mb-5">
         <h3>DAFTAR BARANG</h3>
         <table class="table table-light">
             <thead class="thead thead-dark">
