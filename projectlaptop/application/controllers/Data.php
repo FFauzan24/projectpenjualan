@@ -7,6 +7,7 @@ class Data extends CI_Controller
         parent::__construct();
         $this->load->model('Data_Barang');
         $this->load->library('form_validation');
+        $this->load->library('upload');
     }
     public function index()
     {
@@ -29,6 +30,7 @@ class Data extends CI_Controller
         $this->form_validation->set_rules('harga', 'Harga', 'required');
         $this->form_validation->set_rules('stok', 'Stok', 'required');
         $this->form_validation->set_rules('detail', 'Detail', 'required');
+        $this->form_validation->set_rules('gambar', 'Gambar', 'uploaded');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
